@@ -5,7 +5,7 @@
 * Goal of exploring multi-agent interactions in simple game environments
 * Implemented Proximal Policy Optimization (PPO) algorithm and fine-tuned reward structures to achieve specific agent goals in multiplayer games.
 
-![](https://github.com/caelyasutake/caelyasutake.github.io/blob/main/images/Image_CTF.png)
+![](/images/Image_CTF.png)
 
 # Project 2: Analyzing Brain-like and Model-based Approaches to Reinforcement Learning Generalization
 * Implemented Tensorflow (Deep-learning framework) to construct and train Convolutional Neural Network architectures for Reinforcement Learning on the Atari Breakout game.
