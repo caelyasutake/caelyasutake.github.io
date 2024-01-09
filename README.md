@@ -7,6 +7,6 @@
 
 ![](https://github.com/caelyasutake/caelyasutake.github.io/blob/main/images/Image_CTF.png)
 
-# Project 2: Analyzing Brain-like and Model-based Approaches to Reinforcement Learning )Generalization
+# Project 2: Analyzing Brain-like and Model-based Approaches to Reinforcement Learning Generalization
 * Implemented Tensorflow (Deep-learning framework) to construct and train Convolutional Neural Network architectures for Reinforcement Learning on the Atari Breakout game.
 * Compared Model-based to Model-free based approaches in generalizability on similar game environments.
