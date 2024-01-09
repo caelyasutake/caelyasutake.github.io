@@ -1,6 +1,4 @@
 menu:
-- {name: 'home', url: '/home'}
-- {name: 'projects', url: '/projects'}
 - {name: 'contact', url: '/contact'}
 
 social:
