@@ -1,9 +1,0 @@
-menu:
-- {name: 'contact', url: '/contact'}
-
-social:
-- {icon: 'github', link: 'https://github.com/caelyasutake'}
-- {icon: 'linkedin', link: 'https://linkedin.com/in/cael-yasutake-3649a6237/'}
-
-contacts:
-- {name: 'Cael Yasutake', title: 'Undergraduate Student', department: 'Computer Science', institution: 'Columbia University', phone: '(808) 205-6497', email: 'c.yasutake28@gmail.com', image: 'assets/img/cael.JPG'}
