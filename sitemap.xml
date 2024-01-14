@@ -2,39 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://caelyasutake.github.io/post/project2/</loc>
+    <loc>https://caelyasutake.github.io/caelyasutake/</loc>
+    <lastmod>2024-01-02T12:00:00-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://caelyasutake.github.io/caelyasutake/post/</loc>
+    <lastmod>2024-01-02T12:00:00-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://caelyasutake.github.io/caelyasutake/post/project2/</loc>
     <lastmod>2023-12-10T11:00:59-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://caelyasutake.github.io/</loc>
-    <lastmod>2023-12-10T11:00:59-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://caelyasutake.github.io/post/project1/</loc>
+    <loc>https://caelyasutake.github.io/caelyasutake/post/project1/</loc>
     <lastmod>2023-08-20T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://caelyasutake.github.io/post/</loc>
-    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+    <loc>https://caelyasutake.github.io/caelyasutake/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://caelyasutake.github.io/about/</loc>
+    <loc>https://caelyasutake.github.io/caelyasutake/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://caelyasutake.github.io/categories/</loc>
+    <loc>https://caelyasutake.github.io/caelyasutake/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://caelyasutake.github.io/contact/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://caelyasutake.github.io/tags/</loc>
+    <loc>https://caelyasutake.github.io/caelyasutake/tags/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
