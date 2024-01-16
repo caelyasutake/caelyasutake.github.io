@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Cael Yasutake</title>
-    <link>https://caelyasutake.github.io/caelyasutake/post/</link>
+    <link>https://caelyasutake.github.io/post/</link>
     <description>Recent content in Projects on Cael Yasutake</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Jan 2024 12:00:00 -0500</lastBuildDate>
-    <atom:link href="https://caelyasutake.github.io/caelyasutake/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://caelyasutake.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Evolution of Morphology in Soft-Robotics</title>
-      <link>https://caelyasutake.github.io/caelyasutake/post/project2/</link>
-      <pubDate>Sun, 10 Dec 2023 11:00:59 -0400</pubDate>
-      <guid>https://caelyasutake.github.io/caelyasutake/post/project2/</guid>
-      <description></description>
+      <link>https://caelyasutake.github.io/post/project2/</link>
+      <pubDate>Wed, 20 Dec 2023 11:00:59 -0400</pubDate>
+      <guid>https://caelyasutake.github.io/post/project2/</guid>
+      <description>Evolving Soft Robots to walk via Genetic Programming is a current project exploring the process of synthetic evolution with the hopes of finding innovative locomotion techniques.&#xA;I created a custom physics simulator using C++, Swift, and Apple&amp;rsquo;s Metal Shading Language to perform graphics rendering and calculations. This is a current project however, and I am currently in the process of transitioning the genetic program rendering from Matplotlib to Apple Metal GPU.</description>
     </item>
     <item>
       <title>AI Capture the Flag</title>
-      <link>https://caelyasutake.github.io/caelyasutake/post/project1/</link>
+      <link>https://caelyasutake.github.io/post/project1/</link>
       <pubDate>Sun, 20 Aug 2023 10:58:08 -0400</pubDate>
-      <guid>https://caelyasutake.github.io/caelyasutake/post/project1/</guid>
+      <guid>https://caelyasutake.github.io/post/project1/</guid>
       <description>AI Capture the Flag is a multi-objective reinforcement learning experiment understanding the interactions between multiple agents in the same environment, involving teamwork and cooperation.&#xA;Each team consists of three agents that will work together to capture the opposing team&amp;rsquo;s flag located on the other side of the arena. Agents must grapple between two objectives, capturing the flag and not letting the opponents capture theirs.&#xA;We can see here that in one epoch, the red team chooses to go for the flag, while in the other epoch they choose to defend against the blue agents.</description>
     </item>
   </channel>

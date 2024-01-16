@@ -16,7 +16,7 @@
     
 
     
-<link rel="stylesheet" href="https://caelyasutake.github.io/caelyasutake/ananke/css/main.min.css" >
+<link rel="stylesheet" href="https://caelyasutake.github.io/ananke/css/main.min.css" >
 
 
 
@@ -30,20 +30,20 @@
     
 
     
-      <link rel="canonical" href="https://caelyasutake.github.io/caelyasutake/post/project2/">
+      <link rel="canonical" href="https://caelyasutake.github.io/post/project2/">
     
 
     <meta property="og:title" content="Evolution of Morphology in Soft-Robotics" />
 <meta property="og:description" content="Evolving Soft Robots to walk using Genetic Programming" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://caelyasutake.github.io/caelyasutake/post/project2/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-12-10T11:00:59-04:00" />
-<meta property="article:modified_time" content="2023-12-10T11:00:59-04:00" />
+<meta property="og:url" content="https://caelyasutake.github.io/post/project2/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-12-20T11:00:59-04:00" />
+<meta property="article:modified_time" content="2023-12-20T11:00:59-04:00" />
 
 <meta itemprop="name" content="Evolution of Morphology in Soft-Robotics">
-<meta itemprop="description" content="Evolving Soft Robots to walk using Genetic Programming"><meta itemprop="datePublished" content="2023-12-10T11:00:59-04:00" />
-<meta itemprop="dateModified" content="2023-12-10T11:00:59-04:00" />
-<meta itemprop="wordCount" content="0">
+<meta itemprop="description" content="Evolving Soft Robots to walk using Genetic Programming"><meta itemprop="datePublished" content="2023-12-20T11:00:59-04:00" />
+<meta itemprop="dateModified" content="2023-12-20T11:00:59-04:00" />
+<meta itemprop="wordCount" content="375">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Evolution of Morphology in Soft-Robotics"/>
 <meta name="twitter:description" content="Evolving Soft Robots to walk using Genetic Programming"/>
 
@@ -56,11 +56,12 @@
    
   
 
-  <header>
-    <div class="bg-black">
+  
+  <header class="cover bg-top" style="background-image: url('https://caelyasutake.github.io/images/robot_movement.gif');">
+    <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
-    <a href="https://caelyasutake.github.io/caelyasutake/" class="f3 fw2 hover-white no-underline white-90 dib">
+    <a href="https://caelyasutake.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
       
         Cael Yasutake
       
@@ -72,19 +73,19 @@
         <ul class="pl0 mr3">
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://caelyasutake.github.io/caelyasutake/about/" title="About page">
+            <a class="hover-white no-underline white-90" href="https://caelyasutake.github.io/about/" title="About page">
               About
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://caelyasutake.github.io/caelyasutake/contact/" title="Contact page">
+            <a class="hover-white no-underline white-90" href="https://caelyasutake.github.io/contact/" title="Contact page">
               Contact
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://caelyasutake.github.io/caelyasutake/post/" title="Projects page">
+            <a class="hover-white no-underline white-90" href="https://caelyasutake.github.io/post/" title="Projects page">
               Projects
             </a>
           </li>
@@ -126,6 +127,16 @@
   </div>
 </nav>
 
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Evolution of Morphology in Soft-Robotics</div>
+          
+            <div class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              Evolving Soft Robots to walk using Genetic Programming
+            </div>
+          
+        
+      </div>
     </div>
   </header>
 
@@ -140,13 +151,45 @@
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2023-12-10T11:00:59-04:00">December 10, 2023</time>
+      <time class="f6 mv4 dib tracked" datetime="2023-12-20T11:00:59-04:00">December 20, 2023</time>
       
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><ul class="pa0">
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><figure><img src="https://caelyasutake.github.io/images/MSL_PS.gif"/>
+</figure>
+
+<p>Evolving Soft Robots to walk via Genetic Programming is a current project exploring the process of synthetic evolution with the hopes of finding innovative locomotion techniques.</p>
+<p>I created a custom physics simulator using C++, Swift, and Apple&rsquo;s Metal Shading Language to perform graphics rendering and calculations. This is a current project however, and I am currently in the process of transitioning the genetic program rendering from Matplotlib to Apple Metal GPU. The simulator uses a spring-mass system to simulate the motion of soft-bodies. Each mass object is connected to a variety of other masses through springs. The springs simulate the forces applied to the mass using Hooke&rsquo;s Law, which allows for simple calculation of compressive and tensile forces.</p>
+<figure><img src="https://caelyasutake.github.io/images/cube_bounce.gif"/>
+</figure>
+
+<p>Additional forces such as gravity, friction, and dampening forces are applied to the simulation to uphold kinetic laws and energy consumption. Thus, the goal for an evolved soft robot is to be efficient and effective at combating these force restrictions.</p>
+<p>There are two types of &ldquo;materials&rdquo; the genetic program can use when creating the morphology of the soft robot: bone and muscle. The muscle structure is a soft body cube that has the ability to expand and contract based on an actuating function that determines the lengths of the springs present, allowing the muscle to move based on time. The bone structure is therefore a foundation piece that does not have this ability to expand and contract, instead serving as a base.</p>
+<figure><img src="https://caelyasutake.github.io/images/cube_breathe.gif"/>
+</figure>
+
+<p>The evolution process uses Genetic Programming, a variant of Evolutionary Algorithms that use the pruning and expansion of tree data structures to create solutions to a problem. This provides the possibility to create novel designs to solve problems that maximize &ldquo;fitness&rdquo; or the criteria in which you are testing. In this case, this criteria is the movement capability in the simulated environment.</p>
+<p>This is an active project, last update Dec. 20, 2023.</p>
+<ul>
+<li>Updates being made:
+<ul>
+<li>Adding ambient lighting for better graphics</li>
+<li>Incorporating Metal GPU into calculations in addition to its use in graphics rendering</li>
+<li>Finishing transition of Genetic Program into Metal environment from C++ and Python</li>
+<li>Improving computational ability to support more complex robots</li>
+</ul>
+</li>
+</ul>
+<p>Here are my past renditions of robotic movement using Genetic Programming, this will be updated when rendering in Metal is complete.</p>
+<figure><img src="https://caelyasutake.github.io/images/robot_movement.gif"/>
+</figure>
+
+<figure><img src="https://caelyasutake.github.io/images/robot_bounce.gif"/>
+</figure>
+
+<ul class="pa0">
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -167,7 +210,7 @@
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://caelyasutake.github.io/caelyasutake/" >
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://caelyasutake.github.io/" >
     &copy;  Cael Yasutake 2024 
   </a>
     <div>
