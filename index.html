@@ -76,37 +76,20 @@
       <div class="section__pic-container">
         <img 
           src="./assets/profile-cael2.jpeg" 
-          alt="Profile picture"
+          alt="About picture"
+          class="about-pic"
         >
       </div>
       <div class="about-details-container">
-        <!--
         <div class="about-containers">
           <div class="details-container">
-            <img 
-              src="./assets/education.png" 
-              alt="education icon" 
-              class="icon"
-            >
-            <h3>Education</h3>
-            <p>B.Sc. Columbia University <br /></p>
+            <div class="text-container">
+              <p>I'm an undergraduate student at Columbia University studying Computer Science. I'm originally from Maui, Hawaii and love to spend my time at the beach or on a hike when I have time!</p>
+              <br/>
+              <p>My main interests lie in Artificial Intelligence (AI), Machine Learning (ML), and Robotics! You can see some of my projects in the project section below!</p>
+              <br>
+            </div>
           </div>
-          <div class="details-container">
-            <img 
-              src="./assets/experience.png" 
-              alt="experience icon" 
-              class="icon"
-            >
-            <h3>Experience</h3>
-            <p>Machine Learning / Artificial Intelligence Engineer<br />Software Development</p>
-          </div>
-        </div>
-        -->
-        <div class="text-container">
-          <p>I'm an undergraduate student at Columbia University studying Computer Science. I'm originally from Maui, Hawaii and love to spend my time at the beach or on a hike when I have time!</p>
-          <br/>
-          <p>My main interests lie in Artificial Intelligence (AI), Machine Learning (ML), and Robotics! You can see some of my projects in the project section below!</p>
-          <br/>
         </div>
       </div>
     </div>
@@ -127,17 +110,18 @@
               <img 
                 src="./assets/GDIT.png" 
                 alt="GDIT icon"
-                class="gdit-icon"
+                class="job-icon"
               />
               <div class="job-title">
                 <h3>General Dynamics Information Technology</h3>
+                <br>
                 <ul>
                   <li><div>
-                    <h3>Software Development Engineering Associate</h3>
-                    <p>Working on central informational hub used for company data resources.</p>
+                    <h3 class="job-desc">Software Development Engineering Associate</h3>
+                    <p>Working on a centralized information hub designed for company resource interfaces.</p>
                   </div></li>
                   <li><div>
-                    <h3>AI/ML Engineering Associate</h3>
+                    <h3 class="job-desc">AI/ML Engineering Associate</h3>
                     <p>Implemented multivariate time series forecasting models for beneficiary timelines.</p>
                   </div></li>
                 </ul>
@@ -147,18 +131,19 @@
               <img 
                 src="./assets/columbia.jpeg" 
                 alt="Columbia icon"
-                class="columbia-icon"
+                class="job-icon"
               />
               <div class="job-title">
                 <h3>Columbia University</h3>
+                <br>
                 <ul>
                   <li><div>
-                    <h3>Undergraduate Researcher</h3>
+                    <h3 class="job-desc">Undergraduate Researcher</h3>
                     <p>Facilitating a research project on optimizing inverse kinematics for robotic manipulators.</p>
                   </div></li>
                   <li><div>
-                    <h3>AI Safety Fellow</h3>
-                    <p>Led a research project evaluating and benchmarking model-based reinforcement learning algorithms towards Artificial General Intelligence (AGI).</p>
+                    <h3 class="job-desc">AI Safety Fellow</h3>
+                    <p>Led a research project evaluating and benchmarking reinforcement learning algorithms.</p>
                   </div></li>
                 </ul>
               </div>
@@ -175,62 +160,61 @@
     />
   </section>
   <section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
     <h1 class="title">Projects</h1>
     <div class="experience-details-container">
       <div class="about-containers">
         <div class="details-container color-container">
         <div class="article-container">
           <img 
-            src="./assets/project-1.png" 
-            alt="Project 1"
+            src="./assets/CTF_1.gif" 
+            alt="AI Plays Capture the Flag"
             class="project-img"
             />
         </div>
-        <h2 class="experience-sub-title project-title">Project One</h2>
+        <h2 class="experience-sub-title project-title">AI Plays Capture the Flag</h2>
         <div class="btn-container">
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https:://github.com'">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/caelyasutake/CaptureTheFlag'">
             Github
           </button>
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https:://github.com'">
+          <!--<button class="btn btn-color-2 project-btn" onclick="location.href='https:://github.com'">
             Live Demo
-          </button>
+          </button>-->
         </div>
         </div>
         <div class="details-container color-container">
         <div class="article-container">
           <img 
-            src="./assets/project-2.png" 
-            alt="Project 2"
+            src="./assets/robot_movement.gif" 
+            alt="Robot Evolution"
             class="project-img"
             />
         </div>
-        <h2 class="experience-sub-title project-title">Project One</h2>
+        <h2 class="experience-sub-title project-title">Soft-Robot Evolution Simulated</h2>
         <div class="btn-container">
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https:://github.com'">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/caelyasutake/Evolution-Soft-Robots/'">
             Github
           </button>
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https:://github.com'">
+          <!--<button class="btn btn-color-2 project-btn" onclick="location.href='https:://github.com'">
             Live Demo
-          </button>
+          </button>-->
         </div>
         </div>
         <div class="details-container color-container">
         <div class="article-container">
           <img 
-            src="./assets/project-3.png" 
-            alt="Project 3"
+            src="./assets/stable_40_05.gif" 
+            alt="Robot Walking"
             class="project-img"
             />
         </div>
-        <h2 class="experience-sub-title project-title">Project One</h2>
+        <h2 class="experience-sub-title project-title">Robot Locomotion</h2>
         <div class="btn-container">
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https:://github.com'">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/caelyasutake/Robot-Locomotion'">
             Github
           </button>
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https:://github.com'">
+          <!--<button class="btn btn-color-2 project-btn" onclick="location.href='https:://github.com'">
             Live Demo
-          </button>
+          </button>-->
         </div>
         </div>
       </div>
@@ -243,7 +227,6 @@
     >
   </section>
   <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
     <h1 class="title">Contact Me</h1>
     <div class="contact-info-upper-container">
       <div class="contact-info-container">
@@ -252,7 +235,7 @@
           alt="email icon" 
           class="icon contact-icon email-icon"
         >
-        <p><a href="mailto:exampleemail@gmail.com">Example@gmail.com</a></p>
+        <p><a href="mailto:cyasutake28@gmail.com">cyasutake28@gmail.com</a></p>
       </div>
       <div class="contact-info-container">
         <img 

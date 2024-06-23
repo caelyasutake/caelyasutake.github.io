@@ -1,15 +1,4 @@
 @media screen {
-  .section__pic-container {
-    border-radius: 50%;
-    overflow: 100%;
-  }
-  .section__pic-container img {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-@media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
@@ -17,13 +6,11 @@
   .about-containers {
     flex-wrap: wrap;
   }
-  .section__pic-container {
-    border-radius: 50%;
-    overflow: hidden;
+  #contact, #projects, #about {
+    height: fit-content;
   }
   .section__pic-container img {
-    width: 100%;
-    height: 100%;
+    border-radius: 50%;
   }
 }
 
