@@ -1,3 +1,14 @@
+@media screen {
+  .section__pic-container {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .section__pic-container img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -5,6 +16,14 @@
   }
   .about-containers {
     flex-wrap: wrap;
+  }
+  .section__pic-container {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .section__pic-container img {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -82,9 +101,15 @@
     text-align: center;
   }
   .section__pic-container {
-    width: auto;
-    height: 46vw;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
     justify-content: center;
+    overflow: hidden;
+  }
+  .section__pic-container img {
+    width: 100%;
+    height: auto;
   }
   .section__text__p2 {
     font-size: 1.25rem;

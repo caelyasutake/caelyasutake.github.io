@@ -210,6 +210,19 @@ section {
   height: 2rem;
 }
 
+.gdit-icon {
+  cursor: default;
+  height: 6rem;
+  margin: 1.5rem;
+}
+
+.columbia-icon {
+  cursor: default;
+  height: 6rem;
+  border-radius: 50%;
+  margin: 1.5rem;
+}
+
 /* BUTTONS */
 
 .btn-container {
@@ -337,13 +350,17 @@ section {
 
 article {
   display: flex;
-  width: 10rem;
+  width: 100%;
   justify-content: space-around;
   gap: 0.5rem;
 }
 
 article .icon {
   cursor: default;
+}
+
+.job-title {
+  padding: 1rem;
 }
 
 /* PROJECTS SECTION */
