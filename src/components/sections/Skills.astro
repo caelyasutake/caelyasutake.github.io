@@ -6,7 +6,7 @@ import { loadCV } from '@/utils/cvLoader'
 const CV = await loadCV();
 const { skills = [] } = CV;
 
-// 按类别分组技能
+
 const skillsByCategory = skills.reduce((acc: Record<string, any[]>, skill: any) => {
   const category = skill.category || 'Other'
   if (!acc[category]) {
@@ -16,7 +16,7 @@ const skillsByCategory = skills.reduce((acc: Record<string, any[]>, skill: any) 
   return acc
 }, {})
 
-// 定义类别顺序 - 简化为5个主要类别
+
 const categoryOrder = ['Programming', 'GPU', 'ML', 'Tools']
 const sortedCategories = categoryOrder.filter(cat => skillsByCategory[cat])
 ---
