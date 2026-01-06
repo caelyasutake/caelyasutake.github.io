@@ -3,7 +3,10 @@ import Layout from "@/layouts/Layout.astro";
 import { loadCV } from "@/utils/cvLoader";
 
 const CV = await loadCV();
-const { basics, work, education, skills } = CV;
+const { basics } = CV;
+const work = CV.work ?? [];
+const education = CV.education ?? [];
+const skills = CV.skills ?? [];
 ---
 
 <Layout title={`Resume — ${basics.name}`}>
