@@ -1,0 +1,62 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { loadCV } from "@/utils/cvLoader";
+
+const CV = await loadCV();
+const { basics, work, education, skills } = CV;
+---
+
+<Layout title={`Resume — ${basics.name}`}>
+  <article class="mx-auto max-w-3xl py-8">
+    <header class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+      <div>
+        <h1 class="text-3xl font-bold">{basics.name}</h1>
+        <p class="text-sm text-skin-muted">{basics.label} · <a href={`mailto:${basics.email}`}>{basics.email}</a> · <a href={basics.url} target="_blank" rel="noopener noreferrer">Website</a></p>
+        {basics.summary && <p class="mt-4">{basics.summary}</p>}
+      </div>
+
+      <div class="print:hidden flex gap-2">
+        <button class="contact-link" onclick="window.print()">Print / Save PDF</button>
+        <a class="contact-link" href="/">Back</a>
+      </div>
+    </header>
+
+    <hr class="my-6" />
+
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold">Experience</h2>
+      {work.map(w => (
+        <div class="my-4">
+          <div class="flex justify-between items-baseline">
+            <h3 class="font-medium">{w.name} — {w.position}</h3>
+            <span class="text-sm text-skin-muted">{w.startDate} — {w.endDate ?? 'Present'}</span>
+          </div>
+          {w.summary && <p class="text-sm text-skin-muted mt-1">{w.summary}</p>}
+        </div>
+      ))}
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold">Education</h2>
+      {education.map(e => (
+        <div class="my-3">
+          <div class="flex justify-between items-baseline">
+            <h3 class="font-medium">{e.institution}</h3>
+            <span class="text-sm text-skin-muted">{e.startDate} — {e.endDate ?? 'Present'}</span>
+          </div>
+          <p class="text-sm text-skin-muted mt-1">{e.studyType} · {e.area}</p>
+        </div>
+      ))}
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold">Skills</h2>
+      <div class="flex flex-wrap gap-2 mt-2">
+        {skills.map(s => (
+          <span class="px-2 py-1 bg-skin-muted/8 rounded text-sm">{s.name} — {s.level}</span>
+        ))}
+      </div>
+    </section>
+
+  </article>
+</Layout>

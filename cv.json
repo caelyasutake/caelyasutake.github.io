@@ -27,6 +27,12 @@
         "icon": "mdi:github",
         "username": "caelyasutake",
         "url": "https://github.com/caelyasutake"
+      },
+      {
+        "network": "Resume",
+        "icon": "mdi:file-document",
+        "username": "Resume",
+        "url": "/resume"
       }
     ],
     "about": {

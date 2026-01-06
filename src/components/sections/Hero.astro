@@ -71,16 +71,27 @@ const { city, region, address } = location || {};
 
           {
             profiles?.map(({ network, url, icon }) => (
-              <a
-                href={url}
-                title={`Visit ${name} on ${network}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-link"
-              >
-                <Icon name={icon} width={18} height={18} />
-                <span class="contact-text">{network}</span>
-              </a>
+              url && url.startsWith('/') ? (
+                <a
+                  href={url}
+                  title={`Visit ${name} on ${network}`}
+                  class="contact-link"
+                >
+                  <Icon name={icon} width={18} height={18} />
+                  <span class="contact-text">{network}</span>
+                </a>
+              ) : (
+                <a
+                  href={url}
+                  title={`Visit ${name} on ${network}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-link"
+                >
+                  <Icon name={icon} width={18} height={18} />
+                  <span class="contact-text">{network}</span>
+                </a>
+              )
             ))
           }
         </div>
