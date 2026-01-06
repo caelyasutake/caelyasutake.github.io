@@ -251,47 +251,4 @@ const { city, region, address } = location || {};
       @apply gap-2;
     }
   }
-</style>
 
-<script>
-  const select = document.getElementById("themeSwitch") as HTMLSelectElement;
-  const theme = localStorage.getItem("theme");
-  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-
-  if (theme !== null) {
-    select.value = theme;
-  } else {
-    select.value = systemTheme;
-  }
-
-  function updateTheme(value: string) {
-    const theme = value === "system" ? systemTheme : value;
-    document.documentElement.classList.remove("light", "dark");
-    document.documentElement.classList.add(theme);
-    localStorage.setItem("theme", value);
-  }
-
-  updateTheme(select.value);
-
-  select.addEventListener("change", (event: Event) => {
-    const select = event.target as HTMLSelectElement;
-    updateTheme(select.value);
-  });
-
-  // 打印时禁用深色模式
-  window.addEventListener("beforeprint", () => {
-    document.documentElement.classList.remove("dark");
-  });
-
-  // 打印后恢复深色模式
-  window.addEventListener("afterprint", () => {
-    if (
-      select.value === "dark" ||
-      (select.value === "system" && systemTheme === "dark")
-    ) {
-      document.documentElement.classList.add("dark");
-    }
-  });
-</script>
