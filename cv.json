@@ -1,0 +1,304 @@
+{
+  "analyticsCode": "",
+  "pageLayout": "two",
+  "basics": {
+    "name": "Cael Yasutake",
+    "label": "Robotics MSE @ UPenn",
+    "image": "/avatar.png",
+    "email": "c.yasutake28@gmail.com",
+    "url": "https://github.com/caelyasutake",
+    "summary": "I am a robotics master's student at the University of Pennsylvania, working at the intersection of robotics, AI, and high-performance computing. My work focuses on developing efficient, scalable algorithms for motion planning, control, and learning, with an emphasis on real-world robotic systems. I aim to advance robotic autonomy through algorithm design and systems-level optimization.",
+    "theme": "red",
+    "location": {
+      "address": "Lahaina",
+      "city": "Hawaii",
+      "countryCode": "USA",
+      "region": "USA"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "icon": "ri:linkedin-fill",
+        "username": "Cael Yasutake",
+        "url": "https://www.linkedin.com/in/cael-yasutake-3649a6237/"
+      },
+      {
+        "network": "GitHub",
+        "icon": "mdi:github",
+        "username": "caelyasutake",
+        "url": "https://github.com/caelyasutake"
+      }
+    ],
+    "about": {
+      "personalInfo": [
+        {
+          "emoji": "🎓",
+          "label": "Education",
+          "value": "University of Pennsylvania",
+          "color": "purple"
+        },
+        {
+          "emoji": "⚡",
+          "label": "Focus",
+          "value": "GPU IK + Robot Learning",
+          "color": "purple"
+        },
+        {
+          "emoji": "🧠",
+          "label": "Stack",
+          "value": "CUDA · C/C++ · PyTorch · Python",
+          "color": "orange"
+        }
+      ]
+    }
+  },
+  "education": [
+    {
+      "institution": "University of Pennsylvania",
+      "url": "https://www.upenn.edu/",
+      "area": "Philadelphia, PA",
+      "studyType": "Master's in Robotics",
+      "startDate": "2025-09",
+      "endDate": null
+    },
+    {
+      "institution": "Columbia University",
+      "url": "https://www.columbia.edu/",
+      "area": "New York, NY",
+      "studyType": "Bachelor's in Computer Science",
+      "startDate": "2021-09",
+      "endDate": "2025-05"
+    },
+    {
+      "institution": "Lahainaluna High School",
+      "url": "https://www.lahainalunahs.org/",
+      "area": "Lahaina, HI",
+      "studyType": "High School Diploma",
+      "startDate": "2017-09",
+      "endDate": "2021-05"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "CUDA Programming Masterclass with C++",
+      "date": "2024-06",
+      "url": "",
+      "issuer": "General Dynamics Information Technology"
+    },
+    {
+      "name": "Machine Learning and Deep Learning Bootcamp in Python",
+      "date": "2023-08",
+      "url": "",
+      "issuer": "Udemy"
+    }
+  ],
+  "work": [
+    {
+      "name": "A²R Lab (Columbia University / Dartmouth College)",
+      "position": "Research Assistant",
+      "location_type": "On-site",
+      "location": "New York, NY",
+      "url": "https://github.com/A2R-Lab",
+      "startDate": "2024-05",
+      "endDate": null,
+      "summary": "Research on GPU-accelerated, sampling-based motion planning and inverse kinematics.",
+      "highlights": [
+        "Designed a hybrid inverse kinematics algorithm combining orientation-aware coordinate descent with Jacobian polishing (arXiv:2510.07514).",
+        "Implemented custom CUDA kernels leveraging block/warp/thread parallelism for batched evaluation of thousands of problems with sub-mm / sub-degree levels of accuracy."
+      ],
+      "skills": {
+        "CUDA": "simple-icons:nvidia",
+        "C++": "simple-icons:cplusplus",
+        "Python": "simple-icons:python",
+        "Git": "mdi:git"
+      }
+    },
+    {
+      "name": "Columbia University",
+      "position": "Teaching Assistant (COMS W4701 Artificial Intelligence)",
+      "location_type": "On-site",
+      "location": "New York, NY",
+      "url": "https://www.columbia.edu/",
+      "startDate": "2024-09",
+      "endDate": "2025-05",
+      "summary": "Teaching assistant for AI course covering search, adversarial methods, probabilistic modeling, and ML.",
+      "highlights": [
+        "Hosted 300+ hours of weekly office hours supporting course concepts and programming assignments.",
+        "Led recitations reinforcing key AI topics for 400+ students."
+      ],
+      "skills": {
+        "Python": "simple-icons:python"
+      }
+    },
+    {
+      "name": "Columbia University & IBM Research Collaboration",
+      "position": "Undergraduate Researcher",
+      "location_type": "On-site",
+      "location": "New York, NY",
+      "url": "https://www.columbia.edu/",
+      "startDate": "2024-09",
+      "endDate": "2024-12",
+      "summary": "Analog In-Memory Computing (AIMC) optimization and adaptive partitioning for model accuracy/latency.",
+      "highlights": [
+        "Co-developed optimization strategies to reduce computational load in AIMC cores and DPUs under IBM mentorship.",
+        "Prototyped an adaptive partitioning algorithm in PyTorch to improve accuracy and latency on COCO."
+      ],
+      "skills": {
+        "PyTorch": "simple-icons:pytorch",
+        "Python": "simple-icons:python"
+      }
+    },
+    {
+      "name": "General Dynamics Information Technology (GDIT)",
+      "position": "Software Development Associate",
+      "location_type": "Remote",
+      "location": "",
+      "url": "https://www.gdit.com/",
+      "startDate": "2024-06",
+      "endDate": "2024-08",
+      "summary": "Automation platforms and LLM data pipelines.",
+      "highlights": [
+        "Co-developed automation platforms for asset tracking and management, improving visibility and reducing manual labor.",
+        "Curated and preprocessed datasets for LLM fine-tuning using Python automation and Hugging Face."
+      ],
+      "skills": {
+        "Python": "simple-icons:python",
+        "Hugging Face": "simple-icons:huggingface"
+      }
+    },
+    {
+      "name": "General Dynamics Information Technology (GDIT)",
+      "position": "AI and ML Associate",
+      "location_type": "Remote",
+      "location": "",
+      "url": "https://www.gdit.com/",
+      "startDate": "2023-06",
+      "endDate": "2023-08",
+      "summary": "Time-series modeling and data pipelines for forecasting.",
+      "highlights": [
+        "Built prototype frameworks for multivariate time-series analysis improving accuracy over prior single-variate models.",
+        "Cleaned and transformed messy customer datasets using Pandas/NumPy for predictive modeling."
+      ],
+      "skills": {
+        "Python": "simple-icons:python",
+        "NumPy": "simple-icons:numpy",
+        "Pandas": "simple-icons:pandas"
+      }
+    }
+  ],
+  "skills": [
+    { 
+      "name": "Python", 
+      "icon": "simple-icons:python", 
+      "level": "Advanced", 
+      "category": "Programming", 
+      "keywords": ["ML", "Robotics", "Data"] 
+    },
+    { 
+      "name": "C/C++", 
+      "icon": "simple-icons:cplusplus", 
+      "level": "Advanced", 
+      "category": "Programming", 
+      "keywords": ["Systems", "Performance"] 
+    },
+    { 
+      "name": "Java", 
+      "icon": "", 
+      "level": "Intermediate", 
+      "category": "Programming", 
+      "keywords": ["Software"] 
+    },
+
+    { 
+      "name": "CUDA", 
+      "icon": "simple-icons:nvidia", 
+      "level": "Advanced", 
+      "category": "GPU", 
+      "keywords": ["Kernels", "Warp-level parallelism"] 
+    },
+    { 
+      "name": "PyTorch", 
+      "icon": "simple-icons:pytorch", 
+      "level": "Advanced", 
+      "category": "ML", 
+      "keywords": ["Training", "Prototyping"] 
+    },
+    { 
+      "name": "TensorFlow", 
+      "icon": "simple-icons:tensorflow", 
+      "level": "Intermediate", 
+      "category": "ML", 
+      "keywords": ["Deep Learning"] 
+    },
+    { 
+      "name": "scikit-learn", 
+      "icon": "simple-icons:scikitlearn", 
+      "level": "Intermediate", 
+      "category": "ML", 
+      "keywords": ["Classical ML"] 
+    },
+    { 
+      "name": "Git", 
+      "icon": "mdi:git", 
+      "level": "Advanced", 
+      "category": "Tools", 
+      "keywords": ["Version control"] 
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native"
+    },
+    {
+      "language": "Japanese",
+      "fluency": "Intermediate"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Robotics",
+      "keywords": ["Motion Planning", "Inverse Kinematics", "Robot Learning"]
+    }
+  ],
+  "references": [],
+  "projects": [
+    {
+      "name": "HJCD-IK: Hybrid Jacobian and Coordinate Descent Inverse Kinematics",
+      "image": {
+        "url": "/projects/hjcd-ik.png",
+        "position": "container"
+      },
+      "isActive": true,
+      "description": "GPU-Accelerated Inverse Kinematics through Batched Hybrid Jacobian Coordinate Descent.",
+      "highlights": [
+        "Open-source inverse kinematics library designed for fast real-time motion planning.",
+        "Custom CUDA kernels for batched evaluation at scale."
+      ],
+      "url": "https://github.com/A2R-Lab/HJCD-IK",
+      "github": "https://github.com/A2R-Lab/HJCD-IK"
+    },
+    {
+      "name": "ShiBot-Inu: Learned Quadruped Locomotion",
+      "image": { "url": "/projects/robot_single.gif", "position": "container" },
+      "isActive": true,
+      "description": "Reinforcement learning for walking gaits on a custom quadruped robot in simulation.",
+      "highlights": [
+        "Trained a custom-designed quadruped using reinforcement learning in NVIDIA Isaac Sim / Isaac Lab."
+      ],
+      "url": "https://github.com/caelyasutake/ShiBot-Inu",
+      "github": "https://github.com/caelyasutake/ShiBot-Inu"
+    },
+    {
+      "name": "Capture The Flag (Multi-Agent RL)",
+      "image": { "url": "/projects/ctf.gif", "position": "container" },
+      "isActive": true,
+      "description": "Multi-agent RL environment optimizing gameplay strategies for capture the flag.",
+      "highlights": [
+        "Designed a multi-agent RL environment and training setup."
+      ],
+      "url": "https://github.com/caelyasutake/CaptureTheFlag",
+      "github": "https://github.com/caelyasutake/CaptureTheFlag"
+    }
+  ]
+}

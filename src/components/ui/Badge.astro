@@ -1,0 +1,68 @@
+---
+import { Icon } from 'astro-icon/components'
+
+export interface Props {
+  variant?: "default" | "primary" | "secondary" | "success" | "warning" | "danger" | "info";
+  size?: "sm" | "md" | "lg";
+  className?: string;
+  icon?: string;
+  iconPosition?: "left" | "right";
+  dot?: boolean;
+}
+
+const {
+  variant = "default",
+  size = "md",
+  className = "",
+  icon,
+  iconPosition = "left",
+  dot = false,
+  ...props
+} = Astro.props;
+
+const baseClasses = "inline-flex items-center gap-1 rounded-md font-medium whitespace-nowrap";
+
+const variants = {
+  default: "bg-skin-button-accent/20 border-skin-hue/20 text-skin-hue border",
+  primary: "bg-skin-hue text-skin-inverted",
+  secondary: "bg-skin-button-accent/30 text-skin-base",
+  success: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300",
+  warning: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300",
+  danger: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300",
+  info: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300"
+};
+
+const sizes = {
+  sm: "px-1.5 py-0.5 text-xs",
+  md: "px-2 py-0.5 text-xs",
+  lg: "px-2.5 py-1 text-sm"
+};
+
+const iconSizes = {
+  sm: { width: 12, height: 12 },
+  md: { width: 14, height: 14 },
+  lg: { width: 16, height: 16 }
+};
+
+const badgeClasses = [
+  baseClasses,
+  variants[variant],
+  sizes[size],
+  className
+].join(" ");
+---
+
+<span class={badgeClasses} {...props}>
+  {dot && (
+    <span
+      class={`w-1.5 h-1.5 rounded-full bg-current ${icon || iconPosition === 'right' ? 'mr-0.5' : ''}`}
+    />
+  )}
+  {icon && iconPosition === 'left' && (
+    <Icon name={icon} {...iconSizes[size]} />
+  )}
+  <slot />
+  {icon && iconPosition === 'right' && (
+    <Icon name={icon} {...iconSizes[size]} />
+  )}
+</span>

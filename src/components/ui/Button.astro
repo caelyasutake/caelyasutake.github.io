@@ -1,0 +1,62 @@
+---
+export interface Props {
+  variant?: "default" | "primary" | "secondary" | "danger" | "ghost" | "outline";
+  size?: "sm" | "md" | "lg";
+  className?: string;
+  disabled?: boolean;
+  type?: "button" | "submit" | "reset";
+  href?: string;
+  target?: string;
+  'aria-label'?: string;
+}
+
+const {
+  variant = "default",
+  size = "md",
+  className = "",
+  disabled = false,
+  type = "button",
+  href,
+  target,
+  'aria-label': ariaLabel,
+  ...props
+} = Astro.props;
+
+const baseClasses = "inline-flex items-center justify-center gap-2 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
+
+const variants = {
+  default: "bg-skin-fill border border-skin-muted text-skin-base hover:bg-skin-muted focus:ring-skin-hue",
+  primary: "bg-skin-hue text-skin-inverted hover:opacity-90 focus:ring-skin-hue",
+  secondary: "bg-skin-button-accent text-skin-inverted hover:bg-skin-button-accent-hover focus:ring-skin-button-accent",
+  danger: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
+  ghost: "text-skin-hue hover:bg-skin-hue/10 focus:ring-skin-hue",
+  outline: "border border-skin-hue text-skin-hue hover:bg-skin-hue hover:text-skin-inverted focus:ring-skin-hue"
+};
+
+const sizes = {
+  sm: "px-2 py-1 text-xs",
+  md: "px-3 py-2 text-sm",
+  lg: "px-4 py-2 text-base"
+};
+
+const buttonClasses = [
+  baseClasses,
+  variants[variant],
+  sizes[size],
+  className
+].join(" ");
+
+const Tag = href ? "a" : "button";
+---
+
+<Tag
+  class={buttonClasses}
+  type={href ? undefined : type}
+  href={href}
+  target={target}
+  disabled={disabled}
+  aria-label={ariaLabel}
+  {...props}
+>
+  <slot />
+</Tag>

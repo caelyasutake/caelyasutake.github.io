@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cael Yasutake</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Cael Yasutake</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Cael Yasutake</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img 
+        src="./assets/profile-cael.JPG" 
+        alt="Cael Yasutake profile picture"
+        />
+    </div>
+    <div class="section__text">
+      <h1 class="title">Cael Yasutake</h1>
+      <p class="section__text__p2">CS @ Columbia</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Yasutake_Cael_Resume2024.pdf')">
+          My Resume
+        </button>
+        <button class="btn btn-color-1" onclick="window.location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img 
+          src="./assets/linkedin.png" 
+          alt="My LinkedIn profile" 
+          class="icon" 
+          onclick="location.href='https://www.linkedin.com/in/cael-yasutake-3649a6237/'"
+        />
+        <img 
+          src="./assets/github.png" 
+          alt="My Github profile" 
+          class="icon" 
+          onclick="location.href='https://github.com/caelyasutake'"
+        />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <!-- <p class="section__text__p1">Get To Know More</p> -->
+    <h1 class="title">Aloha!</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img 
+          src="./assets/profile-cael2.jpeg" 
+          alt="About picture"
+          class="about-pic"
+        >
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <div class="text-container">
+              <p>I'm an undergraduate student at Columbia University studying Computer Science. I'm originally from Maui, Hawaii and love to spend my time at the beach or on a hike when I have time!</p>
+              <br/>
+              <p>My main interests lie in Artificial Intelligence (AI), Machine Learning (ML), and Robotics! You can see some of my projects in the project section below!</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img 
+      src="./assets/arrow.png" 
+      alt="Arrow icon" 
+      class="icon arrow" 
+      onclick="location.href='./#experience'"
+    >
+  </section>
+  <section id="experience">
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <div class="article-container">
+            <article>
+              <img 
+                src="./assets/GDIT.png" 
+                alt="GDIT icon"
+                class="job-icon"
+              />
+              <div class="job-title">
+                <h3>General Dynamics Information Technology</h3>
+                <br>
+                <ul>
+                  <li><div>
+                    <h3 class="job-desc">Software Development Engineering Associate</h3>
+                    <p>Working on a centralized information hub designed for company resource interfaces.</p>
+                  </div></li>
+                  <li><div>
+                    <h3 class="job-desc">AI/ML Engineering Associate</h3>
+                    <p>Implemented multivariate time series forecasting models for beneficiary timelines.</p>
+                  </div></li>
+                </ul>
+              </div>
+            </article>
+            <article>
+              <img 
+                src="./assets/columbia.jpeg" 
+                alt="Columbia icon"
+                class="job-icon"
+              />
+              <div class="job-title">
+                <h3>Columbia University</h3>
+                <br>
+                <ul>
+                  <li><div>
+                    <h3 class="job-desc">Undergraduate Researcher</h3>
+                    <p>Facilitating a research project on optimizing inverse kinematics for robotic manipulators.</p>
+                  </div></li>
+                  <li><div>
+                    <h3 class="job-desc">AI Safety Fellow</h3>
+                    <p>Led a research project evaluating and benchmarking reinforcement learning algorithms.</p>
+                  </div></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img 
+      src="./assets/arrow.png" 
+      alt="Arrow icon" 
+      class="icon arrow" 
+      onclick="location.href='./#projects'"
+    />
+  </section>
+  <section id="projects">
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+        <div class="article-container">
+          <img 
+            src="./assets/CTF_1.gif" 
+            alt="AI Plays Capture the Flag"
+            class="project-img"
+            />
+        </div>
+        <h2 class="experience-sub-title project-title">AI Plays Capture the Flag</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/caelyasutake/CaptureTheFlag'">
+            Github
+          </button>
+          <!--<button class="btn btn-color-2 project-btn" onclick="location.href='https:://github.com'">
+            Live Demo
+          </button>-->
+        </div>
+        </div>
+        <div class="details-container color-container">
+        <div class="article-container">
+          <img 
+            src="./assets/robot_movement.gif" 
+            alt="Robot Evolution"
+            class="project-img"
+            />
+        </div>
+        <h2 class="experience-sub-title project-title">Soft-Robot Evolution Simulated</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/caelyasutake/Evolution-Soft-Robots/'">
+            Github
+          </button>
+          <!--<button class="btn btn-color-2 project-btn" onclick="location.href='https:://github.com'">
+            Live Demo
+          </button>-->
+        </div>
+        </div>
+        <div class="details-container color-container">
+        <div class="article-container">
+          <img 
+            src="./assets/stable_40_05.gif" 
+            alt="Robot Walking"
+            class="project-img"
+            />
+        </div>
+        <h2 class="experience-sub-title project-title">Robot Locomotion</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/caelyasutake/Robot-Locomotion'">
+            Github
+          </button>
+          <!--<button class="btn btn-color-2 project-btn" onclick="location.href='https:://github.com'">
+            Live Demo
+          </button>-->
+        </div>
+        </div>
+      </div>
+    </div>
+    <img 
+      src="./assets/arrow.png" 
+      alt="Arrow icon" 
+      class="icon arrow" 
+      onclick="location.href='./#contact'"
+    >
+  </section>
+  <section id="contact">
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img 
+          src="./assets/email.png" 
+          alt="email icon" 
+          class="icon contact-icon email-icon"
+        >
+        <p><a href="mailto:cyasutake28@gmail.com">cyasutake28@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img 
+          src="./assets/linkedin.png" 
+          alt="LinkedIn Icon" 
+          class="icon contact-icon"
+        >
+        <p><a href="https://www.linkedin.com/in/cael-yasutake-3649a6237/">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2023 Cael Yasutake</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

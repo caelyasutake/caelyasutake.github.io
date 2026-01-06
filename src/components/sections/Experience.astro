@@ -1,0 +1,188 @@
+---
+import Section from '../Section.astro'
+import SkillBadge from '../ui/SkillBadge.astro'
+import { loadCV } from '@/utils/cvLoader'
+import { Icon } from 'astro-icon/components'
+
+const CV = await loadCV();
+const { work = [] } = CV;
+---
+
+<Section className={Astro.props.className} title="Experience">
+  <ul class="flex flex-col">
+    {work.map(({ name, startDate, endDate, position, summary, responsibilities, achievements, url, skills, location, location_type }) => {
+      const startYear = new Date(startDate).getFullYear()
+      const endYear = endDate != null ? new Date(endDate).getFullYear() : "Present"
+
+      return (
+        <li class="relative print:py-2">
+          <div data-expanded="false" class="group relative grid pb-1 print:pb-0 transition-all print:grid-cols-1 print:gap-1 sm:grid-cols-12 sm:gap-8 md:gap-6 lg:hover:!opacity-100 expand-container">
+            <header class="relative mt-1 text-xs font-semibold sm:col-span-2">
+              <time datetime={startDate} data-title={startDate}>{startYear}</time> - <time datetime={endDate} data-title={endDate}>{endYear}</time>
+            </header>
+            <div class="relative flex flex-col pb-6 print:pb-0 before:-ml-6 sm:col-span-10 before:w-px print:before:hidden before:absolute before:bg-skin-muted before:h-full before:mt-2">
+            <div class="absolute w-2 h-2 bg-skin-muted rounded-full mt-2 -translate-x-[1.71rem] ring print:hidden ring-skin-fill"></div>
+              <h3>
+                <div class="inline-flex items-center text-lg print:text-base leading-tight group/link focus-visible:text-amber-500" aria-label="{position} - {company}">
+                  <span>{position} <span>@</span>
+                  {url ? (
+                    <a class="text-skin-hue" href={url} title={`Open ${name}`} target="_blank">{name}</a>
+                  ) : (
+                    <span>{name}</span>
+                  )}
+                  {url &&
+                    <span class="inline-block text-skin-hue print:[&>svg]:hidden">
+                      <Icon name="ri:arrow-up-line" class="inline-block w-4 h-4 ml-1 transition-transform translate-y-px shrink-0 group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none rotate-45" aria-hidden="true">
+                      </Icon>
+                    </span>
+                  }
+                  </span>
+                </div>
+              </h3>
+              {(location || location_type) && (
+                <div class="text-xs text-skin-muted">
+                  {location} {location && location_type && '-'} {location_type}
+                </div>
+              )}
+              <div class="mt-4  print:gap-0 flex flex-col gap-4 print:text-xs text-sm">
+                {summary && (
+                  <div class="flex flex-col gap-1">
+                    <h4>Overview:</h4>
+                    <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
+                      {Array.isArray(summary) ? (
+                        summary.map(item => (
+                          <li>{item}</li>
+                        ))
+                      ) : (
+                        <li>{summary}</li>
+                      )}
+                    </ul>
+                  </div>
+                )}
+
+                {(responsibilities || achievements) &&  (
+                <div class="expandable-content relative flex flex-col print:!h-auto gap-4 print:gap-2 overflow-hidden transition-all duration-300 ease-in-out">
+                  <div class="expandable-inner">
+                    {responsibilities && (
+                      <div class="flex flex-col gap-1">
+                        <h4>Responsibilities:</h4>
+                        <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
+                          {responsibilities.map(responsibility => (
+                            <li>{responsibility}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {achievements && (
+                      <div class="flex flex-col gap-1 mt-4">
+                        <h4>Highlights:</h4>
+                        <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
+                          {achievements.map(achievement => (
+                            <li>{achievement}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+
+                  <div class="fade-overlay absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-skin-hue dark:to-skin-hue/0 print:hidden pointer-events-none transition-opacity duration-300 ease-in-out"></div>
+                </div>
+
+                <button class="print:hidden group/more w-fit cursor-pointer items-center justify-center gap-1.5 text-xs underline text-skin-muted transition-all hover:text-skin-base flex expand-button">
+                  <span class="expand-text">Show more</span>
+                  <Icon name="ri:arrow-up-s-line" class="w-4 h-4 group-hover/more:translate-y-0.5 transition-transform duration-200 ease-out" width={24} height={24}></Icon>
+                </button>
+
+
+                <div class="flex print:hidden flex-wrap gap-2" aria-label="Technologies used">
+                  {skills && Object.entries(skills).map(([label, icon]) => (
+                    <SkillBadge
+                      name={label}
+                      icon={icon as string}
+                    />
+                  ))}
+                </div>
+)}
+              </div>
+            </div>
+        </div>
+        </li>
+      )
+    })}
+  </ul>
+</Section>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const expandButtons = document.querySelectorAll('.expand-button');
+
+    expandButtons.forEach(button => {
+      const container = button.closest('.expand-container') as HTMLElement;
+      const expandableContent = container?.querySelector('.expandable-content') as HTMLElement;
+      const fadeOverlay = container?.querySelector('.fade-overlay') as HTMLElement;
+      const icon = button.querySelector('svg') as SVGElement;
+      const expandText = button.querySelector('.expand-text') as HTMLElement;
+
+      if (!expandableContent || !fadeOverlay || !icon || !expandText) return;
+
+      // Set initial collapsed state
+      const isExpanded = container.dataset.expanded === 'true';
+      if (!isExpanded) {
+        expandableContent.style.maxHeight = '4rem'; // 16 * 0.25rem = 4rem
+      }
+
+      button.addEventListener('click', () => {
+        const isCurrentlyExpanded = container.dataset.expanded === 'true';
+        const newExpandedState = !isCurrentlyExpanded;
+
+        container.dataset.expanded = newExpandedState.toString();
+
+        if (newExpandedState) {
+          // Expanding
+          const scrollHeight = expandableContent.scrollHeight;
+          expandableContent.style.maxHeight = `${scrollHeight}px`;
+          fadeOverlay.style.opacity = '0';
+          icon.style.transform = 'rotate(180deg)';
+          expandText.textContent = 'Show less';
+        } else {
+          // Collapsing
+          expandableContent.style.maxHeight = '4rem';
+          fadeOverlay.style.opacity = '1';
+          icon.style.transform = 'rotate(0deg)';
+          expandText.textContent = 'Show more';
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  li::marker {
+    @apply text-skin-hue;
+  }
+
+  .expandable-content {
+    max-height: 4rem;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .expand-container[data-expanded="true"] .expandable-content {
+    max-height: none;
+  }
+
+  .expand-container[data-expanded="true"] .fade-overlay {
+    opacity: 0;
+  }
+
+  .expand-container[data-expanded="true"] .expand-button svg {
+    transform: rotate(180deg);
+  }
+
+  .expand-button svg {
+    transition: transform 0.2s ease-out;
+  }
+
+  .fade-overlay {
+    transition: opacity 0.3s ease-in-out;
+  }
+</style>

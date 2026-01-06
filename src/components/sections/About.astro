@@ -1,0 +1,101 @@
+---
+import Section from "../Section.astro";
+import Card from "../ui/Card.astro";
+import Badge from "../ui/Badge.astro";
+import { getBasics } from "@/utils/cvLoader";
+
+const basics = await getBasics();
+const { summary, about } = basics;
+---
+
+<Section title="About Me">
+  <div class="mb-6">
+    <p class="font-mono opacity-75 print:font-sans text-sm leading-relaxed">
+      {summary}
+    </p>
+  </div>
+
+  {about && (
+    <div class="space-y-6">
+
+      {about.personalInfo && about.personalInfo.length > 0 && (
+        <div>
+          <h4 class="text-sm font-medium text-skin-base mb-3 print:mb-2">
+            Basic Info
+          </h4>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 print:grid-cols-4 print:gap-2">
+            {about.personalInfo.map(({ emoji, label, value, color }) => (
+              <Card variant="outline" padding="sm" className="text-center print:p-1">
+                <div class="space-y-1">
+                  <div class="text-lg">{emoji}</div>
+                  <div class="text-xs text-skin-muted print:text-xs">{label}</div>
+                  <div class="text-sm font-medium text-skin-base print:text-xs">{value}</div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {about.traits && about.traits.length > 0 && (
+        <div>
+          <h4 class="text-sm font-medium text-skin-base mb-3 print:mb-2">
+            Traits
+          </h4>
+          <div class="flex flex-wrap gap-2 print:gap-1">
+            {about.traits.map(({ emoji, text, color }) => (
+              <Badge
+                variant="default"
+                size="md"
+                className="print:text-xs print:px-1 print:py-0"
+              >
+                <span class="mr-1">{emoji}</span>
+                {text}
+              </Badge>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {about.highlights && about.highlights.length > 0 && (
+        <div>
+          <h4 class="text-sm font-medium text-skin-base mb-3 print:mb-2">
+            Highlights
+          </h4>
+          <div class="grid gap-2">
+            {about.highlights.map(({ emoji, text, color }) => (
+              <Card variant="gradient" padding="sm" className="print:p-1">
+                <div class="flex items-center gap-2">
+                  <span class="text-base flex-shrink-0">{emoji}</span>
+                  <span class="text-sm text-skin-base print:text-xs">{text}</span>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {about.quote && (
+        <Card variant="subtle" padding="lg" className="print:p-2">
+          <div class="text-center space-y-4">
+            <div class="text-2xl print:text-lg">{about.quote.emoji}</div>
+            <blockquote class="text-base italic text-skin-base print:text-sm leading-relaxed">
+              "{about.quote.text}"
+            </blockquote>
+            {about.quote.values && about.quote.values.length > 0 && (
+              <div class="flex flex-wrap justify-center gap-3 pt-2">
+                {about.quote.values.map(({ emoji, label, color }) => (
+                  <div class="flex items-center gap-1 text-sm text-skin-muted">
+                    <span>{emoji}</span>
+                    <span>{label}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </Card>
+      )}
+    </div>
+  )}
+</Section>
+
