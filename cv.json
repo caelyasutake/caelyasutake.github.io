@@ -332,7 +332,8 @@
       "isActive": true,
       "description": "Multi-agent RL environment optimizing gameplay strategies for capture the flag.",
       "highlights": [
-        "Designed a multi-agent RL environment and training setup."
+        "Designed a multi-agent RL environment and training setup.",
+        "Implemented the PPO algorithm to have agents learn to optimize for both offensive and defensive strategies."
       ],
       "url": "https://github.com/caelyasutake/CaptureTheFlag",
       "github": "https://github.com/caelyasutake/CaptureTheFlag"
