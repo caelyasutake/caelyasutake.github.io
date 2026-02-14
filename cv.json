@@ -44,15 +44,21 @@
           "color": "purple"
         },
         {
-          "emoji": "⚡",
+          "emoji": "⚙️",
           "label": "Focus",
-          "value": "GPU IK + Robot Learning",
+          "value": "Robotics + ML",
           "color": "purple"
         },
         {
-          "emoji": "🧠",
+          "emoji": "🤖",
           "label": "Stack",
-          "value": "CUDA · C/C++ · PyTorch · Python",
+          "value": "CUDA · PyTorch · ROS",
+          "color": "orange"
+        },
+        {
+          "emoji": "💻",
+          "label": "Programming",
+          "value": "C/C++ · Python · Matlab · Java",
           "color": "orange"
         }
       ]
@@ -214,6 +220,13 @@
       "category": "Programming", 
       "keywords": ["Software"] 
     },
+    { 
+      "name": "Matlab", 
+      "icon": "", 
+      "level": "Beginner", 
+      "category": "Programming", 
+      "keywords": ["Software"] 
+    },
 
     { 
       "name": "CUDA", 
@@ -242,6 +255,13 @@
       "level": "Intermediate", 
       "category": "ML", 
       "keywords": ["Classical ML"] 
+    },
+    { 
+      "name": "ROS", 
+      "icon": "simple-icons:ros", 
+      "level": "Beginner", 
+      "category": "Robotics", 
+      "keywords": ["Robotics Simulation"] 
     },
     { 
       "name": "Git", 
@@ -294,6 +314,17 @@
       ],
       "url": "https://github.com/caelyasutake/ShiBot-Inu",
       "github": "https://github.com/caelyasutake/ShiBot-Inu"
+    },
+    {
+      "name": "Mobile Robot Navigation",
+      "image": { "url": "/projects/costmap.gif", "position": "container" },
+      "isActive": true,
+      "description": "ROS 2 mobile robot navigation stack in simulation with Gazebo, LiDAR-based SLAM, online localization, costmap generation, and teleoperation.",
+      "highlights": [
+        "Implemented SLAM using ROS to continuously estimate the robot's pose while incrementally building an occupancy grid mpa of the environment."
+      ],
+      "url": "https://github.com/caelyasutake/mobile-robot",
+      "github": "https://github.com/caelyasutake/mobile-robot"
     },
     {
       "name": "Capture The Flag (Multi-Agent RL)",
